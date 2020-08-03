@@ -28,3 +28,13 @@ const isPalindrome = (x) => {
 console.log(isPalindrome(14341)) true
 console.log(isPalindrome(-14341)) false
 ```
+
+### Reverse Integer 
+```
+
+const reverse = (x) => { return (x < 0) ? "-" + x.toString().split("").slice(1).reverse().  join("") : x.toString().split("").reverse().join("")   
+};
+
+console.log(reverse(-123))
+console.log(reverse(123))
+```
