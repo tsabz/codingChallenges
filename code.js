@@ -16,6 +16,21 @@ console.log('coding!');
 // const reverse = (x) => {  return x.toString().split("").reverse().join("")                 
 // };
 
-const reverse = (x) => { return x.toString().split("").reverse().join("")                    
-    //if number is 
+const isPalindrome = (x) => {
+    //num to string
+    let xnum = x.toString()
+    let j = xnum.length - 1
+    //for loop for each char
+    for(let i = 0; i < xnum.length; i++){
+        //for loop backwards for each char
+            //if the chars is not the same return false
+            if(xnum[i] !== xnum[j]) {
+                return false
+        }
+      j--;
+    }
+    return true         
 };
+
+console.log(isPalindrome(14341))
+console.log(isPalindrome(-14341))
