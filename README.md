@@ -40,6 +40,51 @@ const stack = [];
     //new stack array = [1, 2, 3]
     console.log(stack)
 ```
+### Reverse String (using stack)
+First we want to loop through the str and push each letter into the stack
+then we want to set reverse to empty string and do a while loop that runs through the stack length starting from the end of the array and then pop each letter from the stack to contstruct a reverse str 
+
+```
+
+const reverseStr = (str) => {
+    let stack = []
+    //push each string string into stack
+
+    for(let i = 0; i < str.length; i++) {
+        stack.push(str[i])
+    }
+    let reverse = '';
+
+    while(stack.length > 0) {
+        reverse += stack.pop();
+    }
+    return reverse //Tonia Saba
+}
+
+console.log(reverseStr('Tonia Saba'))
+```
+
+
+## Coding Problems
+
+### Merge Sorted Array
+- from Leetcode 
+
+Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+
+Note:
+
+The number of elements initialized in nums1 and nums2 are m and n respectively.
+You may assume that nums1 has enough space (size that is equal to m + n) to hold additional elements from nums2.
+
+```
+const merge = (nums1, m, nums2, n) => { 
+  nums1.splice(m, n, ...nums2)
+  nums1.sort(function(a, b){return a - b}) 
+};
+
+```
+
 
 ### Palindrome Number
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.

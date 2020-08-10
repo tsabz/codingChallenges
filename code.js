@@ -155,31 +155,33 @@ console.log('coding!');
 
 // ** while loop practice ** //
 
-const whileLoop = (str) => {
-    stack = []
+// const whileLoop = (str) => {
+//     stack = []
 
-    for(let i = 0; i < str.length; i++){
-        stack.push(str[i])
-    }
-    let reverseStr = ''
+//     for(let i = 0; i < str.length; i++){
+//         stack.push(str[i])
+//     }
+//     let reverseStr = ''
 
-    while(stack.length > 0){
-        reverseStr += stack.pop()
-    }
-    return reverseStr
-}
-console.log(whileLoop('love'))
+//     while(stack.length > 0){
+//         reverseStr += stack.pop()
+//     }
+//     return reverseStr
+// }
+// console.log(whileLoop('love'))
 // console.log(whileLoop('Tonia'))
+
+
+// ** Merge Sorted Array ** //
+
+const merge = (nums1, m, nums2, n) => {
+    nums1.splice(m, n, ...nums2)
+    nums1.sort(function(a, b){return a - b}) 
+}
+
+console.log(merge([1,2,3,0,0,0],3,[2,5,6],3))
+
 
 
 // ** Hash tables ** //
 
-// const contents = []
-
-// const hash = (value) => {
-//     let result = 0;
-//     for(let i = 0; i < value.length; i++){
-//         result += value.charCodeAt(i);
-//     }
-//     return result;
-// }
