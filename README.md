@@ -85,6 +85,9 @@ const merge = (nums1, m, nums2, n) => {
 
 ```
 
+Solution : I used the splice method to splice the nums1 array, while passing in m and n for the count.  start at index m(3) and add n(3).  Then used the spread operator to pass in nums2 array in order to add it at the position.  
+Challenges : I wanted to chain on .sort() in order to sort the array on one line.  But what I forgot was, once you use splice it it modifies and changes the array therefore you must create a new line with the new nums1 array and sort that one specificaly.  Now also to take into account the positives and negative I had to pass in a function that returns a - b
+
 
 ### Palindrome Number
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
